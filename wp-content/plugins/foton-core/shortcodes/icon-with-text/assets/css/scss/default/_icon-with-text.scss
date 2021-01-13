@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+
+.mkdf-iwt-icon {
+	position: relative;
+	line-height: 0;
+
+	a, span {
+		line-height: 0;
+	}
+}
+
+.mkdf-iwt-icon img {
+	@include mkdfTransition(all 0.2s ease);
+}
+
+.mkdf-iwt:hover .mkdf-iwt-icon img:first-child {
+	opacity: 0;
+}
+
+.mkdf-iwt:hover .mkdf-iwt-icon img:last-child {
+	opacity: 1;
+}
+
+.mkdf-iwt-icon img:nth-child(2) {
+	opacity: 0;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+.mkdf-iwt {
+	@include mkdfRelativeHolderLayout();
+
+	&:hover {
+		.mkdf-iwt-inner {
+			background-color: #fff;
+			box-shadow: $default-box-shadow;
+			@include mkdfTransform(translate3d(0, -20px,0));
+
+
+			&.mkdf-iwt-show-border {
+				border-color: transparent;
+			}
+		}
+	}
+
+	.mkdf-iwt-inner {
+		@include mkdfRelativeHolderLayout();
+		padding: 30px;
+		width: 100%;
+		box-sizing: border-box;
+		border-radius: 8px;
+		@include mkdfTransition(all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1));
+
+		&.mkdf-iwt-no-hover-effect {
+			@include mkdfTransform(translate3d(0,0,0));
+		}
+
+		&.mkdf-iwt-show-border {
+			border-radius: 8px;
+			border: 1px solid #dde7ff;
+		}
+
+		&.mkdf-iwt-no-hover-shadow {
+			background-color: unset;
+			box-shadow: unset;
+			border-radius: unset;
+		}
+
+		&.mkdf-iwt-show-regular-shadow {
+			background-color: #fff;
+			box-shadow: $default-box-shadow;
+			border-radius: 8px;
+		}
+
+		&.mkdf-iwt-icon-left {
+
+			.mkdf-iwt-icon,
+			.mkdf-iwt-content {
+				display: table-cell;
+				vertical-align: top;
+			}
+
+			.mkdf-iwt-icon {
+				position: relative;
+				top: 1px;
+
+				img {
+					max-width: none;
+				}
+			}
+
+			.mkdf-iwt-content {
+				padding: 0 0 0 25px;
+			}
+		}
+
+		&.mkdf-iwt-icon-left-from-title {
+
+			.mkdf-iwt-icon,
+			.mkdf-iwt-title-text {
+				position: relative;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.mkdf-iwt-icon {
+
+				.mkdf-icon-element {
+					@include mkdfTransition(none);
+				}
+
+				img {
+					max-width: none;
+				}
+			}
+
+			.mkdf-iwt-title-text {
+				padding: 0 0 0 17px;
+			}
+		}
+
+		&.mkdf-iwt-icon-left-from-title-and-text {
+			text-align: center;
+
+			&.mkdf-iwt-align-right {
+				text-align: right;
+			}
+
+			&.mkdf-iwt-align-left {
+				text-align: left;
+
+				&.mkdf-iwt-no-arrow {
+					.mkdf-iwt-arrow {
+						display: none !important;
+					}
+				}
+			}
+
+			.mkdf-iwt-content {
+				display: inline-block;
+				vertical-align: text-top;
+			}
+
+			.mkdf-iwt-icon,
+			.mkdf-iwt-title,
+			.mkdf-iwt-arrow {
+				position: relative;
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			@media screen and (max-width: 1399px) and (min-width: 1200px) {
+				.mkdf-iwt-arrow {
+					display: none;
+				}
+			}
+
+			.mkdf-iwt-icon {
+
+				.mkdf-icon-element {
+					@include mkdfTransition(none);
+				}
+
+				img {
+					max-width: none;
+				}
+			}
+
+			.mkdf-iwt-arrow {
+				padding: 0 0 0 30px;
+			}
+
+			.mkdf-iwt-title {
+				&:hover {
+					.mkdf-iwt-arrow {
+						color: $first-main-color;
+					}
+				}
+			}
+
+			span.mkdf-iwt-title {
+				padding: 0 0 0 31px;
+
+				.mkdf-iwt-title-text,
+				.mkdf-iwt-text {
+					text-align: left;
+					margin: 0;
+					display: block;
+				}
+
+
+
+				.mkdf-iwt-text {
+					@include mkdfTextSmaller();
+					color: #716c80;
+				}
+			}
+		}
+
+		&.mkdf-iwt-icon-top {
+			text-align: center;
+
+			.mkdf-iwt-content {
+				padding: 23px 0 0;
+			}
+		}
+	}
+
+	.mkdf-iwt-icon {
+
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.mkdf-icon-shortcode {
+			line-height: 1;
+
+			&.mkdf-circle,
+			&.mkdf-square {
+				line-height: 2;
+			}
+		}
+	}
+
+	.mkdf-iwt-title {
+		margin: 0;
+		line-height: 1.2em;
+
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+
+			&:hover {
+				color: $default-heading-color;
+			}
+		}
+	}
+
+	.mkdf-iwt-title-text {
+		display: block;
+	}
+
+	.mkdf-iwt-text {
+		margin: 20px 0 0;
+	}
+}
+
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */

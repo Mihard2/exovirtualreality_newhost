@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Social Icons Group widget style - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+.mkdf-side-menu .mkdf-social-icons-group-widget .mkdf-social-icon-widget-holder:hover {
+  background-color: #fff !important;
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons .mkdf-social-icon-widget-holder {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: 0 7px;
+  font-size: 17px;
+  color: #fff;
+  background-color: #58468c;
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons .mkdf-social-icon-widget-holder:hover {
+  color: #58468c;
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons .mkdf-social-icon-widget-holder .mkdf-social-icon-widget {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons.mkdf-light-skin .mkdf-social-icon-widget-holder {
+  color: #58468c;
+  background-color: #fff;
+}
+
+.mkdf-social-icons-group-widget.mkdf-square-icons.mkdf-light-skin .mkdf-social-icon-widget-holder:hover {
+  color: #58468c;
+}
+
+.mkdf-social-icons-group-widget.mkdf-circle-icons .mkdf-social-icon-widget-holder {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0 7px;
+  font-size: 17px;
+  color: #444977;
+  background-color: #fff;
+  box-shadow: 0px 10px 10px rgba(45, 45, 71, 0.8);
+}
+
+.mkdf-social-icons-group-widget.mkdf-circle-icons .mkdf-social-icon-widget-holder:hover {
+  color: #ff8a73;
+  background-color: #fff;
+}
+
+.mkdf-social-icons-group-widget.mkdf-circle-icons .mkdf-social-icon-widget-holder .mkdf-social-icon-widget {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.mkdf-social-icons-group-widget.mkdf-circle-icons.mkdf-light-skin .mkdf-social-icon-widget-holder {
+  color: #58468c;
+  background-color: #fff;
+}
+
+.mkdf-social-icons-group-widget.mkdf-circle-icons.mkdf-light-skin .mkdf-social-icon-widget-holder:hover {
+  color: #58468c;
+}
+
+.mkdf-social-icons-group-widget .mkdf-social-icon-widget-holder {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  text-align: center;
+}
+
+.mkdf-social-icons-group-widget .mkdf-social-icon-widget-holder:first-child {
+  margin-left: 0;
+}
+
+.mkdf-social-icons-group-widget .mkdf-social-icon-widget-holder:last-child {
+  margin-right: 0;
+}
+
+/* ==========================================================================
+   Social Icons Group widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=social-icons-group-widget-map.css.map */

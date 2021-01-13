@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Content Bottom styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   #Content bottom styles - begin
+   ========================================================================== */
+.mkdf-content-bottom .mkdf-content-bottom-inner {
+  box-sizing: border-box;
+}
+
+.mkdf-content-bottom .mkdf-content-bottom-inner.mkdf-grid {
+  padding: 20px 0;
+}
+
+.mkdf-content-bottom .mkdf-content-bottom-inner.mkdf-full-width {
+  padding: 20px 40px;
+}
+
+/* ==========================================================================
+   #Content bottom styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Content Bottom styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=content-bottom-map.css.map */

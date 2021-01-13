@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Video Button shortcode start styles
+   ========================================================================== */
+
+.mkdf-video-button-holder {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	
+	&.mkdf-vb-has-img {
+		
+		.mkdf-video-button-play,
+		.mkdf-video-button-play-image {
+			@include mkdfAbsoluteHolderLayout();
+			z-index: 1;
+			
+			.mkdf-video-button-play-inner {
+				position: relative;
+				display: block;
+				top: 50%;
+				@include mkdfTransform(translateY(-50%));
+				text-align: center;
+				z-index: 10;
+			}
+		}
+	}
+	
+	.mkdf-video-button-image {
+		@include mkdfRelativeHolderLayout();
+
+		img {
+			display: block;
+		}
+	}
+
+	.mkdf-video-button-play-image {
+		&:after {
+			content: '';
+			@include mkdfAbsoluteHolderLayout();
+			background-color: #fff;
+			opacity: 0;
+			@include mkdfTransition(.6s);
+		}
+
+		&:hover {
+			&:after {
+				opacity: .1;
+			}
+		}
+	} 
+	
+	.mkdf-video-button-play,
+	.mkdf-video-button-play-image {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		z-index: 1;
+	}
+	
+	.mkdf-video-button-play {
+		color: $first-main-color;
+		font-size: 106px;
+		line-height: 1;
+		
+		span {
+			display: block;
+			line-height: inherit;
+			
+			&:before {
+				display: block;
+				line-height: inherit;
+			}
+		}
+	}
+	
+	.mkdf-video-button-play-image {
+		
+		&.mkdf-vb-has-hover-image {
+			
+			&:hover {
+				
+				img {
+					
+					&:first-child {
+						opacity: 0;
+					}
+					
+					&:nth-child(2) {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		img {
+			display: block;
+			margin: 0 auto;
+			@include mkdfTransition(.2s cubic-bezier(0.02, 0.54, 0.58, 1));
+			
+			&:first-child {
+				position: relative;
+				opacity: 1;
+			}
+			
+			&:nth-child(2) {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				opacity: 0;
+				@include mkdfTransform(translateX(-50%) translateZ(0));
+				
+				.rev_slider_wrapper & {
+					@include mkdfTransform(translateZ(0));
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Video Button shortcode end styles
+   ========================================================================== */

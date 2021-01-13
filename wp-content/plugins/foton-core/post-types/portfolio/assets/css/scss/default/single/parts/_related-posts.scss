@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.mkdf-ps-related-posts-holder {
+	@include mkdfRelativeHolderLayout();
+	margin: 10px 0 0;
+	clear: both;
+	
+	.mkdf-related-posts-title {
+		padding: 0 15px;
+	}
+	
+	.mkdf-ps-related-posts {
+		margin: 0 -15px;
+	}
+	
+	.mkdf-ps-related-post {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 25%;
+		float: left;
+		padding: 0 15px 25px;
+		box-sizing: border-box;
+		
+		@include ipad-landscape {
+			width: 50%;
+			
+			&:nth-child(2n) {
+				clear: both;
+			}
+		}
+		
+		@include phone-landscape {
+			width: 100%;
+		}
+		
+		&:hover {
+			
+			.mkdf-ps-related-image {
+				
+				a {
+					
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	
+	.mkdf-ps-related-image {
+		@include mkdfRelativeHolderLayout();
+		
+		a, img {
+			display: block;
+		}
+		
+		img {
+			border-radius: 8px;
+		}
+		
+		a {
+			
+			&:after {
+				@include mkdfImageOverlayHoverStyle(false);
+				background-color: rgba(42, 42, 51, .8);
+				z-index: 1;
+				border-radius: 8px;
+			}
+		}
+	}
+	
+	.mkdf-ps-related-text {
+		@include mkdfRelativeHolderLayout();
+		margin: 20px 0 0;
+		
+		.mkdf-ps-related-title {
+			margin: 0;
+		}
+		
+		.mkdf-ps-related-categories {
+			@include mkdfTextColorLightPurple();
+			margin: 6px 0 0;
+			
+			a {
+				padding: 0 4px 0 0;
+				display: inline-block;
+			}
+			
+			a:after {
+				content: '.';
+				position: relative;
+				top: 0;
+				right: -4px;
+				color: initial;
+			}
+			
+			a:last-child:after {
+				content: '';
+			}
+			
+			a {
+				color: inherit;
+				
+				&:hover {
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */

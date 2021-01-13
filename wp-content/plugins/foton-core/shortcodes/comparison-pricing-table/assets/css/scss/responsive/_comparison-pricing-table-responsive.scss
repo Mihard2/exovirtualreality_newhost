@@ -1,0 +1,90 @@
+@include laptop-landscape-medium {
+	.mkdf-comparision-pricing-table-holder .mkdf-cpt-table .mkdf-cpt-table-content li {
+		font-size: 12px;
+	}
+}
+
+@include ipad-landscape {
+	.mkdf-comparision-pricing-table-holder {
+		&.mkdf-three-columns {
+			.mkdf-cpt-features-holder {
+				display: none;
+			}
+
+			.mkdf-cpt-table {
+				width: 100%;
+				float: none;
+				margin-bottom: -1px;
+
+				.mkdf-cpt-table-head-holder,
+				.mkdf-cpt-table-content {
+					border-left: 1px solid #e1e5fa !important;
+				}
+			}
+
+			.mkdf-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.mkdf-cpt-footer-holder {
+				height: auto;
+				.mkdf-cpt-image-holder {
+					text-align: center;
+					width: 100%;
+					margin: 10px 0;
+				}
+
+				.mkdf-cpt-text-holder {
+					width: 100%;
+				}
+			}
+		}
+
+		&.mkdf-two-columns {
+			.mkdf-cpt-table {
+				margin-bottom: -1px;
+			}
+
+			.mkdf-cpt-footer-holder {
+				height: auto;
+				.mkdf-cpt-image-holder {
+					text-align: center;
+					width: 100%;
+					margin: 10px 0;
+				}
+
+				.mkdf-cpt-text-holder {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.mkdf-comparision-pricing-table-holder {
+		&.mkdf-two-columns {
+			.mkdf-cpt-table {
+				width: 100%;
+			}
+		}
+
+		&.mkdf-two-columns {
+			.mkdf-cpt-features-holder {
+				display: none;
+			}
+
+			.mkdf-cpt-table-item-feature {
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.mkdf-cpt-table-head-holder,
+			.mkdf-cpt-table-content {
+				border-left: 1px solid #e1e5fa !important;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Pie Chart shortcode style - begin
+   ========================================================================== */
+
+.mkdf-pie-chart-holder {
+	@include mkdfRelativeHolderLayout();
+	opacity: 0;
+	@include mkdfTransition(opacity .2s ease-in);
+
+	&:hover {
+
+		.mkdf-pie-chart-holder-inner {
+			@include mkdfTransformTopWithShadow();
+			background-color: #fff;
+		}
+	}
+
+	.mkdf-pie-chart-holder-inner {
+		padding-top: 60px;
+		@include mkdfRelativeHolderLayout();
+		@include mkdfTransition(all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1));
+		border-radius: 8px;
+	}
+
+	.mkdf-pc-percentage {
+		position: relative;
+		display: block;
+		height: 176px;
+		width: 176px;
+		line-height: 176px;
+		text-align: center;
+		margin: 0 auto;
+
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.mkdf-pc-percent {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			color: $default-heading-color;
+			font-size: 45px;
+			line-height: inherit;
+			font-weight: 300;
+
+			&:after {
+				position: relative;
+				top: -15px;
+				content: '%';
+				font-size: 22px;
+			}
+		}
+	}
+
+	.mkdf-pc-text-holder {
+		@include mkdfRelativeHolderLayout();
+		width: calc(100% - 110px);
+		text-align: center;
+		margin: 30px 55px 60px;
+
+		.mkdf-pc-title {
+			margin: 0;
+		}
+
+		.mkdf-pc-text {
+			margin: 14px 0 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   Pie Chart shortcode style - end
+   ========================================================================== */

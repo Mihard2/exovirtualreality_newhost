@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Portfolio Single - Gallery layout style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+    
+    &.mkdf-ps-gallery-layout {
+        
+        .mkdf-ps-image-holder {
+	        width: 100%;
+	
+	        .mkdf-ps-image {
+		        float: left;
+		        
+		        a {
+			        @include mkdfImageOverlayHoverStyle();
+
+					&:after {
+						background-color: rgba(42,42,51,.8);
+					}
+		        }
+	        }
+        }
+	
+	    > .mkdf-grid-row {
+		    margin-top: 18px;
+	    }
+
+	    .mkdf-ps-info-holder {
+			.mkdf-ps-social-share {
+				.mkdf-social-title {
+					margin: 15px 0 10px;
+				}
+			}
+		}
+
+		.mkdf-ps-navigation {
+			margin: 53px 0 18px;
+		}
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Gallery layout style - end
+   ========================================================================== */

@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Progress Bar shortcode style - begin
+   ========================================================================== */
+
+.mkdf-progress-bar {
+    @include mkdfRelativeHolderLayout();
+    
+    &.mkdf-pb-percent-floating {
+
+        
+        .mkdf-pb-percent {
+            position: absolute;
+            left: 0;
+            right: auto;
+            bottom: 0;
+            @include mkdfTransform(translateX(-50%));
+        }
+    }
+    
+    .mkdf-pb-title-holder {
+        position: relative;
+        margin: 10px 0 4px;
+        font-weight: 500;
+        
+        .mkdf-pb-title {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            z-index: 100;
+        }
+    }
+	
+    .mkdf-pb-percent {
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+        width: auto;
+	    display: inline-block;
+	    vertical-align: middle;
+        opacity: 0;
+        @include mkdfTransition(opacity .4s .4s);
+	    z-index: 10;
+        
+        &:after {
+            content: '%';
+        }
+    }
+    
+    .mkdf-pb-content-holder {
+        position: relative;
+        height: 5px;
+        overflow: hidden;
+        background-color: #f0f5ff;
+        
+        .mkdf-pb-content {
+            height: 5px;
+            width: 0;
+            max-width: 100%;
+            overflow: hidden;
+            background-color: $first-main-color;
+        }
+    }
+}
+/* ==========================================================================
+   Progress Bar shortcode style - end
+   ========================================================================== */

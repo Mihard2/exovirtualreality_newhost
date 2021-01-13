@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Icon widget style - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+.mkdf-icon-widget-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.mkdf-icon-widget-holder > * {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.mkdf-icon-widget-holder .mkdf-icon-text {
+  padding: 0 0 0 10px;
+}
+
+.mkdf-icon-widget-holder .mkdf-icon-text.mkdf-no-icon {
+  padding: 0;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder {
+  color: #58468c !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder:hover {
+  color: #ff8a73 !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-icon-widget-holder:hover {
+  color: #fff !important;
+}
+
+/* ==========================================================================
+   Icon widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=icon-widget-map.css.map */

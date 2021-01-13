@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Cards Gallery shortcode style - begin
+   ========================================================================== */
+
+.mkdf-cards-gallery {
+	@include mkdfRelativeHolderLayout();
+	padding: 10px 0;
+	
+	.mkdf-cg-inner {
+		@include mkdfRelativeHolderLayout();
+	}
+
+	img {
+		position: relative;
+		display: block;
+		box-shadow: 0px 20px 40px 0px rgba(230, 206, 191, 0.7);
+	}
+	
+	.mkdf-cg-fake-card {
+		position: relative;
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+	
+	.mkdf-cg-card {
+		position: absolute;
+		box-sizing: border-box;
+		@include mkdfTransition(all .15s ease);
+		
+		&.mkdf-animating {
+			@include mkdfTransition(all 1s cubic-bezier(.19, 1, .22, 1));
+			pointer-events: none;
+		}
+		
+		&.mkdf-animating-siblings {
+			@include mkdfTransition(all .6s cubic-bezier(0, 0, 0, 1));
+			pointer-events: none;
+		}
+	}
+	
+	&.mkdf-cg-shuffled-left .mkdf-cg-card {
+		left: 0;
+		will-change: transform;
+		
+		&.mkdf-out {
+			@include mkdfTransform(translateX(-100%));
+		}
+		
+		&:nth-last-child(6) {
+			@include mkdfTransform(scale(.44) translateX(90%));
+		}
+		
+		&:nth-last-child(5) {
+			@include mkdfTransform(scale(.54) translateX(65%));
+		}
+		
+		&:nth-last-child(4) {
+			@include mkdfTransform(scale(.64) translateX(46%));
+		}
+		
+		&:nth-last-child(3) {
+			@include mkdfTransform(scale(.74) translateX(32%));
+		}
+		
+		&:nth-last-child(2) {
+			@include mkdfTransform(scale(.84) translateX(20.2%));
+		}
+		
+		&:not(:last-of-type) {
+			cursor: pointer;
+		}
+		
+		&:not(:last-of-type):not(.active):hover {
+			margin-left: 10px !important;
+		}
+	}
+	
+	&.mkdf-cg-shuffled-right .mkdf-cg-card {
+		right: 0;
+		will-change: transform;
+		
+		&.mkdf-out {
+			@include mkdfTransform(translateX(100%));
+		}
+
+		&:nth-last-child(6) {
+			@include mkdfTransform(scale(.44) translateX(90%));
+		}
+
+		&:nth-last-child(5) {
+			@include mkdfTransform(scale(.54) translateX(65%));
+		}
+
+		&:nth-last-child(4) {
+			@include mkdfTransform(scale(.64) translateX(46%));
+		}
+
+		&:nth-last-child(3) {
+			@include mkdfTransform(scale(.74) translateX(32%));
+		}
+
+		&:nth-last-child(2) {
+			@include mkdfTransform(scale(.84) translateX(20.2%));
+		}
+		
+		&:not(:last-of-type) {
+			cursor: pointer;
+		}
+		
+		&:not(:last-of-type):not(.active):hover {
+			margin-right: 10px !important;
+		}
+	}
+	
+	.no-touch &.mkdf-bundle-animation {
+		
+		img {
+			visibility: hidden;
+		}
+		
+		&.mkdf-cg-shuffled-right.mkdf-appeared {
+			@include keyframes(mkdfCardAppearFromRight) {
+				0% {
+					@include mkdfTransform(translate3d(100%, 0, 0));
+					opacity: 0;
+					visibility: visible;
+				}
+				
+				30% {
+					opacity: 1;
+					visibility: visible;
+				}
+				
+				100% {
+					visibility: visible;
+					@include mkdfTransform(translate3d(0, 0, 0));
+				}
+			}
+			
+			img {
+				@include mkdfAnimation(mkdfCardAppearFromRight 1s cubic-bezier(.19, 1, .22, 1) forwards);
+			}
+			
+			.mkdf-cg-card {
+				@for $i from 1 through 8 {
+					&:nth-child(#{$i}) {
+						img:not(.mkdf-animation-done) {
+							-webkit-animation-delay: $i * .2s;
+							-moz-animation-delay: $i * .2s;
+							animation-delay: $i * .2s;
+						}
+					}
+				}
+			}
+		}
+		
+		&.mkdf-cg-shuffled-left.mkdf-appeared {
+			@include keyframes(mkdfCardAppearFromLeft) {
+				0% {
+					visibility: visible;
+					opacity: 0;
+					@include mkdfTransform(translate3d(-100%, 0, 0));
+				}
+				
+				30% {
+					visibility: visible;
+					opacity: 1;
+				}
+				
+				100% {
+					visibility: visible;
+					@include mkdfTransform(translate3d(0, 0, 0));
+				}
+			}
+			
+			img {
+				@include mkdfAnimation(mkdfCardAppearFromLeft 1s cubic-bezier(.19, 1, .22, 1) forwards);
+			}
+			
+			.mkdf-cg-card {
+				@for $i from 1 through 8 {
+					&:nth-child(#{$i}) {
+						img:not(.mkdf-animation-done) {
+							-webkit-animation-delay: $i * .2s;
+							-moz-animation-delay: $i * .2s;
+							animation-delay: $i * .2s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Cards Gallery shortcode style - begin
+   ========================================================================== */

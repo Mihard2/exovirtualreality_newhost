@@ -1,0 +1,17 @@
+/*
+Theme Name: Foton Child
+Theme URI: http://foton.mikado-themes.com
+Description: A child theme of Foton Theme
+Author: Mikado Themes
+Author URI: http://themeforest.net/user/mikado-themes
+Version: 1.0.0
+Text Domain: foton
+Template: foton
+*/
+
+.mkdf-title-image {
+    background: url("../wp-content/uploads/2018/06/aboutus-background-img1.jpg");    
+}
+.mkdf-title-image img {
+    opacity: 0;
+}

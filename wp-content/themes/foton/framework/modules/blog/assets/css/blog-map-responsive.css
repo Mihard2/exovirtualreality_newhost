@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Blog responsive styles - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+@media screen and (max-width: 680px) {
+  .mkdf-author-description-image {
+    display: none;
+  }
+  .mkdf-author-description-text-holder {
+    width: 90%;
+    padding: 5%;
+  }
+  .mkdf-blog-single-navigation-text {
+    padding: 0;
+  }
+  .mkdf-comment-image {
+    display: none;
+  }
+  .mkdf-comment-holder .mkdf-comment-text {
+    width: 90%;
+    padding: 5%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .mkdf-blog-masonry.mkdf-grid-list.mkdf-three-columns .mkdf-item-space,
+  .mkdf-blog-masonry.mkdf-grid-list.mkdf-three-columns .mkdf-masonry-grid-sizer {
+    width: 50%;
+  }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .mkdf-blog-slider-holder.mkdf-bs-carousel-centered .active.center .mkdf-item-text-wrapper {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Blog Slider shortcode responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Blog responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=blog-map-responsive.css.map */

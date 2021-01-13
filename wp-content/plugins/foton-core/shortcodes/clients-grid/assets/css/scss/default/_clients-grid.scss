@@ -1,0 +1,26 @@
+/* ==========================================================================
+   clients Holder shortcode style - begin
+   ========================================================================== */
+
+.mkdf-clients-grid-holder {
+	@include mkdfRelativeHolderLayout();
+	text-align: center;
+	
+	&.mkdf-cg-alignment-left {
+		text-align: left;
+	}
+	
+	&.mkdf-cg-alignment-right {
+		text-align: right;
+	}
+	
+	.mkdf-cc-link {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+/* ==========================================================================
+   clients Holder shortcode style - end
+   ========================================================================== */

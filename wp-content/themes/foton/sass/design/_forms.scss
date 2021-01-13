@@ -1,0 +1,99 @@
+    .sign-wrapp {
+        max-width: 500px;
+        margin: auto;
+
+        .tab-links {
+            display: flex;
+            align-items: flex-end;
+
+            span {
+                border: 2px solid $blueFont;
+                text-transform: uppercase;
+                padding: 3px 10px;
+                font-size: 22px;
+                font-weight: 900;
+                color: lighten($blueFont, 10%);
+                cursor: pointer;
+                transition: all .3s;
+                height: min-content;
+
+                &:hover {
+                    color: darken($blueFont, 10%);
+                }
+
+                &:first-child {
+                    margin-right: -2px;
+                }
+
+                &.tab-links_bg {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 2px solid $blueFont;
+
+                }
+
+                &.active {
+                    color: darken($blueFont, 10%);
+                    border-bottom: 2px solid transparent;
+                }
+            }
+        }
+
+        .sign-block {
+            border: 2px solid $blueFont;
+            border-top: none;
+            padding: 20px;
+            display: none;
+
+            h2 {
+                margin: 0 0 20px;
+            }
+
+            &.sign-active {
+                display: block;
+
+                h2,
+                form {
+                    animation: showBlock .2s linear forwards;
+                }
+            }
+
+            @keyframes showBlock {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    #respond input[type=text],
+    #respond textarea,
+    .mkdf-style-form textarea,
+    .post-password-form input[type=password],
+    .wpcf7-form-control.wpcf7-date,
+    .wpcf7-form-control.wpcf7-number,
+    .wpcf7-form-control.wpcf7-quiz,
+    .wpcf7-form-control.wpcf7-select,
+    .wpcf7-form-control.wpcf7-text,
+    .wpcf7-form-control.wpcf7-textarea,
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        max-height: 14vh;
+        text-transform: none;
+        padding: 1vh 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .mkdf-vertical-showcase .mkdf-vs-contact-form .mkdf-vs-contact-form-info h3 {
+        font-size: 6vh;
+    }
+    .mkdf-cf7-btn-custom-hover {
+        p {
+            margin: 4vh auto !important;
+        }
+    }

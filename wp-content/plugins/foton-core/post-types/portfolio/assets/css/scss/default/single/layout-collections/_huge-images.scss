@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Portfolio Single - Huge Images layout style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+    
+    &.mkdf-ps-huge-images-layout {
+        padding: 0 4%;
+	    box-sizing: border-box;
+
+        .mkdf-ps-content-item {
+          margin: 0 0 18px;
+        }
+	    
+        .mkdf-ps-image-holder {
+            margin: 0 0 40px;
+        
+            .mkdf-ps-image {
+                margin: 0 0 30px;
+            
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+	    
+	    @include laptop-landscape {
+		    padding: 0 40px;
+	    }
+	
+	    @include ipad-portrait {
+		    padding: 0 30px;
+	    }
+
+		.mkdf-ps-navigation {
+			margin: 33px 0 18px;
+		}
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Huge Images layout style - end
+   ========================================================================== */

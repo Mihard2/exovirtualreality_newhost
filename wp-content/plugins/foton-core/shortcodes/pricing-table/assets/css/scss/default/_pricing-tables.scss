@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.mkdf-pricing-tables {
+    @include mkdfRelativeHolderLayout();
+}
+
+.mkdf-price-table {
+
+    .mkdf-pt-inner:hover {
+        @include mkdfTransition(all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1));
+        box-shadow: $default-box-shadow;
+        border-radius: 8px;
+    }
+
+    .mkdf-pt-inner {
+        @include mkdfRelativeHolderLayout();
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+
+                &.mkdf-pt-prices {
+                    position: absolute;
+                    padding: 51px 15px 0;
+                    text-align: right;
+                    top: 0;
+                    left: 0;
+                    max-width: 156px;
+                    box-sizing: border-box;
+
+                    .mkdf-pt-value {
+                        position: relative;
+                        vertical-align: super;
+                        bottom: 15px;
+                        font-size: 24px;
+                        line-height: 1em;
+                        font-weight: 600;
+                        color: $default-heading-color;
+                    }
+
+                    .mkdf-pt-price {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-family: $default-heading-font;
+                        font-size: 70px;
+                        line-height: 1em;
+                        color: #5d4d8c;
+                    }
+
+                    .mkdf-pt-mark {
+                        position: relative;
+                        display: block;
+                        margin: 13px 0 0 24px;
+                        font-family: $default-heading-font;
+                        font-size: 11px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 0.125em;
+                    }
+                }
+
+                &.mkdf-pt-content-holder {
+                    padding: 74px 15px 0 168px;
+
+                    .mkdf-pt-title-holder {
+                        position: relative;
+                        color: #5d4d8c;
+                        font-family: $default-heading-font;
+                        font-size: 22px;
+                        line-height: 26px;
+                        font-weight: 500;
+
+                        .mkdf-pt-title {
+                            display: block;
+                            padding: 17px 0 0;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .mkdf-pt-additional-title-holder {
+                        position: relative;
+                        color: #5d4d8c;
+                        font-family: $default-heading-font;
+                        font-size: 22px;
+                        line-height: 26px;
+                        font-weight: 500;
+
+                        .mkdf-pt-additional-title {
+                            display: block;
+                            padding: 12px 0 0;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .mkdf-pt-content {
+                        padding: 30px 0 45px;
+                        ul li {
+                            padding: 4px 0;
+                        }
+                    }
+
+                    .mkdf-pt-button {
+                        padding: 0 0 59px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.mkdf-pt-active-item {
+        .mkdf-pt-inner {
+            box-shadow: $default-box-shadow;
+            border-radius: 8px;
+        }
+    }
+}
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */

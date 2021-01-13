@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Portfolio Single - Small Images layout style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+    
+    &.mkdf-ps-small-images-layout {
+    
+        .mkdf-ps-image-holder {
+        
+            .mkdf-ps-image {
+                margin: 0 0 30px;
+            
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    
+        .mkdf-ps-content-item {
+            margin: 0 0 18px;
+        }
+
+        .mkdf-ps-navigation {
+            margin: 60px 0 18px;
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Small Images layout style - end
+   ========================================================================== */

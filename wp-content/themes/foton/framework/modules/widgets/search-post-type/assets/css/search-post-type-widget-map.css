@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Search Post Type widget style - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+.widget.mkdf-search-post-type-widget {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-post-type {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: none;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 10px 20px;
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-post-type-search-results ul li {
+  display: block;
+  width: 100%;
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-icon,
+.widget.mkdf-search-post-type-widget .mkdf-search-loading {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 9px);
+  font-size: 18px;
+  color: #58468c;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.02, 0.54, 0.58, 1);
+  -moz-transition: opacity 0.2s cubic-bezier(0.02, 0.54, 0.58, 1);
+  transition: opacity 0.2s cubic-bezier(0.02, 0.54, 0.58, 1);
+}
+
+.widget.mkdf-search-post-type-widget .mkdf-search-icon.mkdf-hidden,
+.widget.mkdf-search-post-type-widget .mkdf-search-loading.mkdf-hidden {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   Search Post Type widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=search-post-type-widget-map.css.map */

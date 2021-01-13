@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Testimonials elegant style - begin
+   ========================================================================== */
+
+.mkdf-testimonials-holder {
+
+    &.mkdf-testimonials-carousel {
+        opacity: 0;
+        text-align: center;
+
+
+      .mkdf-testimonial-text-holder{
+        max-width:900px;
+      }
+
+        @include phone-landscape{
+            .mkdf-testimonials{
+                padding: 0;
+            }
+        }
+
+        .mkdf-testimonial-text {
+            margin-top: 0;
+            font-size: 22px;
+            color: #595959;
+        }
+
+        .mkdf-testimonial-image-nav {
+            @include mkdfRelativeHolderLayout();
+            max-width: 470px;
+            margin: 27px auto 0;
+            text-align: center;
+
+            @include ipad-landscape {
+                max-width: 282px;
+            }
+
+            .owl-item {
+                cursor: pointer;
+
+                &.active {
+
+                    &.center {
+
+                        .mkdf-testimonial-image {
+                            @include mkdfTransform(scale(1));
+                        }
+                    }
+                }
+            }
+        }
+
+        .mkdf-testimonial-image {
+            position: relative;
+            display: block;
+            width: 94px;
+            height: 94px;
+            @include mkdfTransform(scale(.78723));
+            @include mkdfTransitionTransform(.3s cubic-bezier(0.02, 0.54, 0.58, 1));
+
+            img {
+                width: 100% !important;
+            }
+        }
+
+        .mkdf-testimonial-author {
+            margin-top: 22px;
+        }
+
+        .mkdf-testimonials-author-job {
+            margin-top: 8px;
+        }
+    }
+
+    &.mkdf-testimonials-light{
+        .mkdf-testimonial-title,
+        .mkdf-testimonial-text{
+            color: #fff;
+        }
+    }
+}
+
+.mkdf-owl-custom-slider {
+    position: relative;
+    display: none;
+    width: 100%;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1;
+
+    &.owl-loaded {
+        display: block;
+    }
+
+    &.owl-loading {
+        opacity: 0;
+        display: block;
+    }
+
+    &.owl-hidden {
+        opacity: 0;
+    }
+
+    &.owl-refresh .owl-item {
+        visibility: hidden;
+    }
+
+    &.owl-drag .owl-item {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    &.owl-grab {
+        cursor: move;
+        cursor: grab;
+    }
+
+    &.owl-rtl {
+        direction: rtl;
+
+        .owl-item {
+            float: right;
+        }
+    }
+
+    /* No Js */
+    .no-js & {
+        display: block;
+    }
+
+    .owl-stage {
+        position: relative;
+        -ms-touch-action: pan-Y;
+
+        &:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+    }
+
+    .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        /* fix for flashing background */
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    .owl-wrapper,
+    .owl-item {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+    }
+
+    .owl-item {
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+
+        img {
+            display: block;
+            width: 100%;
+
+            .owl-lazy {
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+            }
+        }
+
+        .owl-lazy {
+            opacity: 0;
+            transition: opacity 400ms ease;
+        }
+    }
+
+    .owl-nav {
+
+        &.disabled {
+            display: none;
+        }
+
+        .owl-prev,
+        .owl-next {
+            cursor: pointer;
+            cursor: hand;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    }
+
+    .owl-dots {
+
+        &.disabled {
+            display: none;
+        }
+
+        .owl-dot {
+            cursor: pointer;
+            cursor: hand;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    }
+
+    /*
+     *  Owl Carousel - Animate Plugin
+     */
+    .animated {
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .owl-animated-in {
+        z-index: 0;
+    }
+
+    .owl-animated-out {
+        z-index: 1;
+    }
+
+    .fadeOut {
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+    }
+}
+
+/* ==========================================================================
+   Testimonials elegant style - end
+   ========================================================================== */

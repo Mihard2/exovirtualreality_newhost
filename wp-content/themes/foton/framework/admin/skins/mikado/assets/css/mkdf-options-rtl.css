@@ -1,0 +1,104 @@
+.mkdf-options-page {
+	margin: 20px 2px 0 20px;
+}
+.mkdf-page .pull-left, .mkdf-meta-box .pull-left {
+	float: right !important;
+}
+.mkdf-theme-name img {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.mkdf-top-section-holder {
+	margin-right: 233px;
+	margin-left: 0 !important;
+}
+.mkdf-top-section-holder-inner {
+	width: 100%;
+}
+.mkdf-notification-holder {
+	left: 150px;
+	right: auto;
+}
+.mkdf-input-change, .mkdf-changes-saved {
+	left: 20px;
+	right: auto;
+}
+.mkdf-input-change i, .mkdf-changes-saved i {
+	margin-left: 20px;
+	margin-right: 0;
+}
+.mkdf-top-buttons-holder {
+	text-align: left !important;
+	padding-left: 20px;
+	padding-right: 0 !important;
+}
+.mkdf-tabs-wrapper.vertical.left .mkdf-tabs-navigation-wrapper {
+	float: right !important;
+	border-left: 1px solid #363e46;
+	border-right: 0;
+}
+.mkdf-tabs-wrapper.vertical.left .nav-tabs > li > a {
+	padding-right: 16px;
+	padding-left: 0 !important;
+}
+.mkdf-tooltip.mkdf-inline-tooltip.left {
+	margin-left: 10px;
+	margin-right: 0 !important;
+}
+.mkdf-tabs-wrapper.vertical.left .nav-tabs > li > a span {
+	border-right: 1px solid #566269;
+	border-left: 0 !important;
+}
+.mkdf-tabs-wrapper.vertical.left .nav-tabs > li.active > a {
+	border-left: 4px solid #22B2D6 !important;
+	border-right: 0 !important;
+}
+.mkdf-tabs-wrapper.vertical .mkdf-tabs-content {
+	margin-right: 199px;
+	margin-left: 0 !important;
+	border-right: 1px solid #dbdee0;
+	border-left: 0 !important;
+}
+.mkdf-options-page .mkdf-page-content-wrapper .mkdf-page-title {
+	float: right;
+}
+.mkdf-options-page .mkdf-page-content-wrapper .mkdf-anchor-holder {
+	float: left;
+}
+.mkdf-options-page .mkdf-page-content-wrapper .mkdf-anchor-holder > span {
+	margin-left: 25px;
+	margin-right: 0;
+}
+.mkdf-options-page .mkdf-page-content-wrapper .mkdf-anchor-holder .dropdown-toggle {
+	padding-right: 17px;
+	padding-left: 14px;
+}
+.mkdf-options-page .mkdf-page-content-wrapper .mkdf-anchor-holder .caret {
+	left: 15px;
+	right: auto;
+}
+.mkdf-options-page .mkdf-page-content-wrapper .mkdf-page-section-title {
+	padding-right: 10px;
+	padding-left: 0;
+}
+.mkdf-page .mkdf-checkbox-group-holder .checkbox-inline {
+	float: right;
+	text-align: right;
+}
+.mkdf-page .mkdf-checkbox-group-holder .checkbox-inline input {
+	margin: 0 0 0 4px;
+}
+.mkdf-page .radio-inline + .radio-inline, .mkdf-page .checkbox-inline + .checkbox-inline, .mkdf-meta-box .radio-inline + .radio-inline, .mkdf-meta-box .checkbox-inline + .checkbox-inline {
+	margin-right: 10px;
+	margin-left: 0;
+}
+.mkdf-options-page .mkdf-page-content-wrapper .mkdf-page-section-subtitle {
+	right: -20px;
+	left: auto;
+	border-right: 3px solid #ABB7C7;
+	border-left: 0;
+}
+.mkdf-page-form-section-holder .mkdf-page-form-container-holder::before {
+	right: 19px;
+	left: auto;
+}

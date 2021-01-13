@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.mkdf-image-with-text-holder {
+    @include mkdfRelativeHolderLayout();
+	
+	&.mkdf-has-shadow {
+		
+		.mkdf-iwt-image {
+			box-shadow: $default-box-shadow;
+		}
+	}
+	
+	.mkdf-iwt-image {
+		@include mkdfRelativeHolderLayout();
+		
+		a {
+			position: relative;
+			display: block;
+		}
+
+		img {
+            border-radius: 8px;
+            border: 1px solid #dfe8ff;
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.mkdf-iwt-text-holder {
+		@include mkdfRelativeHolderLayout();
+        text-align: center;
+	}
+	
+	.mkdf-iwt-title {
+		margin: 32px 0 0;
+	}
+	
+	.mkdf-iwt-text {
+		margin: 14px 0 0;
+	}
+	
+	.mkdf-iwt-enable-new {
+		box-shadow: 0 10px 20px 0 rgba(85, 128, 255, 0.5);
+		border-radius: 3px;
+		position: absolute;
+		right: -30px;
+		top: 40px;
+		height: 60px;
+		width: 60px;
+		line-height: 60px;
+		text-align: center;
+		background-color: $third-main-color;
+		color: #fff;
+		font-family: $default-heading-font;
+		font-weight: 500;
+		font-size: 11px;
+		letter-spacing: .125em;
+		text-transform: uppercase;
+		
+		@media screen and (max-width: 680px) {
+			right: -21px;
+			top: 40px;
+			height: 50px;
+			width: 50px;
+			line-height: 50px;
+		}
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-custom-link {
+
+		&:hover {
+
+			.mkdf-iwt-image {
+				@include mkdfTransform(translate3d(0, -20px, 0));
+				
+				
+				img {
+					@include mkdfTransition(all 0.3s cubic-bezier(0.02, 0.54, 0.58, 1));
+					box-shadow:  0 10px 35px 5px rgba(137,173,255,.30);
+				}
+			}
+		}
+		
+		.mkdf-iwt-image {
+			@include mkdfTransition(all 0.3s cubic-bezier(0.02, 0.54, 0.58, 1));
+		}
+
+		&.mkdf-image-bottom-buttons {
+			padding-bottom: 15px;
+
+			&:hover {
+				
+				.mkdf-iwt-text-holder {
+					opacity: 0;
+					transform: translateX(-30px);
+					transition-delay: 0s;
+				}
+
+				.mkdf-iwt-bottom-buttons-holder {
+
+					.mkdf-iwt-bottom-button  {
+						opacity: 1;
+						transform: translateX(0);
+					}
+				}
+			}
+
+			.mkdf-iwt-text-holder {
+				transition: all .3s cubic-bezier(0, 0.76, 0, 1.03);
+				transition-delay: .1s;
+				opacity: 1;
+			}
+			
+			.mkdf-iwt-bottom-buttons-holder {
+				text-align: center;
+				position: absolute;
+				bottom: -2px;
+				width: 100%;
+
+				.mkdf-iwt-bottom-button  {
+					height: 48px;
+					display: inline-block;
+					border-radius: 8px;
+					border: 1px solid #dfe8ff;
+					margin-right: 12px;
+					transform: translateX(30px);
+					opacity: 0;
+					transition: all .3s cubic-bezier(0.41, 0.24, 0, 1.03);
+
+					&:hover {
+						box-shadow: 0 10px 20px 5px rgba(137,173,255,.25)
+					}
+
+					> a {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-lightbox {
+		
+		.mkdf-iwt-image {
+			
+			a {
+				@include mkdfImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-zoom {
+		
+		.mkdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include mkdfTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include mkdfTransform(scale(1));
+				@include mkdfTransitionTransform(.3s cubic-bezier(0.02, 0.54, 0.58, 1));
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-grayscale {
+		
+		.mkdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include mkdfTransition(all .3s cubic-bezier(0.02, 0.54, 0.58, 1));
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

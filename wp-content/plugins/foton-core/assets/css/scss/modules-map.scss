@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+@import '../../../../../themes/foton/assets/css/scss/variables';
+@import '../../../../../themes/foton/assets/css/scss/mixins';
+
+/* ==========================================================================
+   Custom Post Types styles
+   ========================================================================== */
+@import '../../../reviews/assets/css/scss/default/**/*.scss';
+@import '../../../reviews/shortcodes/**/assets/css/scss/default/*.scss';

@@ -1,0 +1,29 @@
+.mkdf-page .col-lg-1, .mkdf-page .col-lg-2, .mkdf-page .col-lg-3, .mkdf-page .col-lg-4, .mkdf-page .col-lg-5, .mkdf-page .col-lg-6, .mkdf-page .col-lg-7, .mkdf-page .col-lg-8, .mkdf-page .col-lg-9, .mkdf-page .col-lg-10, .mkdf-page .col-lg-11, .mkdf-page .col-lg-12, .mkdf-meta-box .col-lg-1, .mkdf-meta-box .col-lg-2, .mkdf-meta-box .col-lg-3, .mkdf-meta-box .col-lg-4, .mkdf-meta-box .col-lg-5, .mkdf-meta-box .col-lg-6, .mkdf-meta-box .col-lg-7, .mkdf-meta-box .col-lg-8, .mkdf-meta-box .col-lg-9, .mkdf-meta-box .col-lg-10, .mkdf-meta-box .col-lg-11, .mkdf-meta-box .col-lg-12 {
+	float: right;
+}
+.mkdf-meta-box .mkdf-meta-box-holder .mkdf-page-form-section .mkdf-field-desc {
+	padding: 15px 0 15px 20px;
+}
+.cb-enable, .cb-disable, .cb-enable span, .cb-disable span {
+	float: right;
+}
+.mkdf-meta-box-holder .mkdf-page-form-container-holder::before {
+	right: 12px;
+	left: auto;
+}
+.mkdf-page .input-group .form-control:first-child, .mkdf-page .input-group-addon:first-child, .mkdf-page .input-group-btn:first-child > .btn, .mkdf-page .input-group-btn:first-child > .btn-group > .btn, .mkdf-page .input-group-btn:first-child > .dropdown-toggle, .mkdf-page .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .mkdf-page .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .mkdf-meta-box .input-group .form-control:first-child, .mkdf-meta-box .input-group-addon:first-child, .mkdf-meta-box .input-group-btn:first-child > .btn, .mkdf-meta-box .input-group-btn:first-child > .btn-group > .btn, .mkdf-meta-box .input-group-btn:first-child > .dropdown-toggle, .mkdf-meta-box .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .mkdf-meta-box .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+}
+.mkdf-page .input-group-addon:last-child, .mkdf-meta-box .input-group-addon:last-child {
+	border-right: 0;
+	border-left: 1px solid #cccccc;
+}
+.mkdf-meta-box-holder .mkdf-page-section-subtitle {
+	right: -13px;
+	left: auto;
+	border-right: 3px solid #ABB7C7;
+	border-left: none;
+}

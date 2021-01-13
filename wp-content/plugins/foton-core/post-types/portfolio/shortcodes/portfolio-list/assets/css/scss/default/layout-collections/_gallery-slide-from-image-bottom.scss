@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide From Image Bottom style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-list-holder {
+	
+	&.mkdf-pl-gallery-slide-from-image-bottom {
+		
+		&.mkdf-pl-has-shadow {
+			
+			.mkdf-pl-item-inner {
+				box-shadow: $default-box-shadow;
+			}
+		}
+		
+		article {
+			
+			&:hover {
+				
+				.mkdf-pli-text-holder {
+					@include mkdfTransform(translateY(0));
+				}
+				
+				.mkdf-pli-text-wrapper {
+					@include mkdfTransform(translateY(0));
+				}
+			}
+			
+			.mkdf-pl-item-inner {
+				overflow: hidden;
+			}
+		}
+		
+		.mkdf-pli-text-holder {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: auto;
+			bottom: 0;
+			left: 0;
+			padding: 15px 20px 10px;
+            z-index: 8;
+			background-color: #fff;
+			overflow: hidden;
+			box-sizing: border-box;
+			@include mkdfTransform(translateY(100%));
+			@include mkdfTransitionTransform(.4s cubic-bezier(0.02, 0.54, 0.58, 1));
+		}
+		
+		.mkdf-pli-text-wrapper {
+			@include mkdfTransform(translateY(-200%));
+			@include mkdfTransitionTransform(.4s cubic-bezier(0.02, 0.54, 0.58, 1));
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Item Layout - Gallery Slide From Image Bottom style - end
+   ========================================================================== */

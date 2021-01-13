@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Horizontal Layer Slider shortcode responsive style - begin
+   ========================================================================== */
+
+
+@include ipad-portrait {
+	.swiper-container.mkdf-horizontal-layer-slider.full-page {
+		.swiper-wrapper .swiper-slide .mkdf-slide-parallax-image-holder {
+			left: 30%;
+			@include mkdfTransform(translate(-20%, -50%))
+		}
+
+		.swiper-navigation .mkdf-swiper-button-prev {
+			left: 20px;
+		}
+
+		.swiper-navigation .mkdf-swiper-button-next {
+			right: 20px;
+		}
+	}
+
+}
+
+@include phone-landscape {
+	.swiper-container.mkdf-horizontal-layer-slider.full-page {
+
+		.swiper-navigation .mkdf-swiper-button-prev,
+		.swiper-navigation .mkdf-swiper-button-next {
+			display: none;
+		}
+	}
+
+}
+
+/* ==========================================================================
+   Horizontal Layer Slider shortcode responsive style - end
+   ========================================================================== */

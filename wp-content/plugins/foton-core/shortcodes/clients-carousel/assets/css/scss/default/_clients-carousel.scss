@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Clients Carousel shortcode style - begin
+   ========================================================================== */
+.mkdf-clients-grid-holder .mkdf-cc-item .mkdf-cc-image-wrapper {
+	@include mkdfTransition(all 0.2s cubic-bezier(0.02, 0.54, 0.58, 1));
+	border-radius: 8px;
+
+	&:hover{
+		box-shadow: $default-box-shadow;
+	}
+}
+
+.mkdf-clients-carousel-holder {
+	@include mkdfRelativeHolderLayout();
+	
+	.mkdf-cc-inner {
+		@include mkdfRelativeHolderLayout();
+	}
+	
+	.mkdf-cc-item {
+		@include mkdfRelativeHolderLayout();
+
+		.touch & {
+			cursor: pointer;
+		}
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.mkdf-cc-link {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+/***** Hover Types - begin *****/
+
+.mkdf-cc-hover-switch-images {
+	
+	.mkdf-cc-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		&.mkdf-cci-has-link {
+			
+			a {
+				
+				&:hover {
+					
+					.mkdf-cc-image {
+						opacity: 0;
+					}
+					
+					.mkdf-cc-hover-image {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		&.mkdf-cci-no-link {
+			
+			&:hover {
+				
+				.mkdf-cc-image {
+					//opacity: 0;
+				}
+				
+				.mkdf-cc-hover-image {
+					opacity: 1;
+				}
+			}
+			
+			.mkdf-cc-hover-image {
+				left: 50%;
+				@include mkdfTransform(translateX(-50%));
+			}
+		}
+		
+		.mkdf-cc-image {
+			opacity: 1;
+			will-change: opacity;
+			@include mkdfTransition(opacity .15s cubic-bezier(0.02, 0.54, 0.58, 1));
+		}
+		
+		.mkdf-cc-hover-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: auto;
+			opacity: 0;
+			will-change: opacity;
+			@include mkdfTransition(opacity .15s cubic-bezier(0.02, 0.54, 0.58, 1));
+		}
+	}
+}
+
+.mkdf-cc-hover-roll-over {
+	
+	.mkdf-cc-item {
+		overflow: hidden;
+		
+		&.mkdf-cci-has-link {
+			
+			a {
+				
+				&:hover {
+					
+					.mkdf-cc-image {
+						@include mkdfTransform(translateY(100%));
+					}
+					
+					.mkdf-cc-hover-image {
+						@include mkdfTransform(translate(-50%, 0));
+					}
+				}
+			}
+		}
+		
+		&.mkdf-cci-no-link {
+			
+			&:hover {
+				
+				.mkdf-cc-image {
+					@include mkdfTransform(translateY(100%));
+				}
+				
+				.mkdf-cc-hover-image {
+					@include mkdfTransform(translate(-50%, 0));
+				}
+			}
+		}
+		
+		.mkdf-cc-image {
+			position: relative;
+			display: block;
+			width: auto;
+			margin: 0 auto;
+			@include mkdfTransitionTransform(.4s ease);
+		}
+		
+		.mkdf-cc-hover-image {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			@include mkdfTransform(translate(-50%, -100%));
+			@include mkdfTransitionTransform(.4s ease);
+		}
+	}
+}
+
+.mkdf-cc-image-wrapper{
+	position: relative;
+	line-height: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/***** Hover Types - end *****/
+
+/* ==========================================================================
+   Clients Carousel shortcode style - end
+   ========================================================================== */

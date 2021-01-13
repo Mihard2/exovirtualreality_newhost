@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Item Showcase shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape {
+	
+	.mkdf-item-showcase-holder {
+		
+		.mkdf-is-image {
+			position: absolute;
+			left:0;
+			width: 50%;
+			height: 100%;
+			margin-top: 0 !important; //override inline margin if set by user
+			
+			img {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				@include mkdfTransform(translate(-50%,-50%));
+			}
+		}
+		
+		.mkdf-is-item-holder {
+			
+			&.mkdf-is-left-holder,
+			&.mkdf-is-right-holder {
+				float: right;
+				width: 50%;
+				padding: 0 0 0 50%;
+			}
+			
+			&.mkdf-is-right-holder {
+				margin: 36px 0 0;
+			}
+		}
+
+	  	.mkdf-is-item {
+		    margin: 36px 0 0;
+		    
+		    &.mkdf-is-left {
+			    text-align: left;
+			
+			    .mkdf-is-content {
+				    padding: 0 0 0 20px;
+			    }
+		    }
+		    
+		    &:not(.mkdf-appeared) {
+			    @include mkdfTransform(translateX(-40px));
+		    }
+	  	}
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	
+	.mkdf-item-showcase-holder {
+		
+		.mkdf-is-image {
+			display: none;
+		}
+		
+		.mkdf-is-item-holder {
+			
+			&.mkdf-is-left-holder,
+			&.mkdf-is-right-holder {
+				float: none;
+				width: 100%;
+				padding: 0;
+			}
+		}
+		
+		.mkdf-is-item {
+			opacity: 1;
+			-webkit-transform: translateX(0) translateY(0) !important;
+			-moz-transform: translateX(0) translateY(0) !important;
+			transform: translateX(0) translateY(0) !important;
+			
+			&.mkdf-is-left,
+			&.mkdf-is-right {
+				
+
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Item Showcase shortcode responsive style - end
+   ========================================================================== */

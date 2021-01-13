@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Text Marquee shortcode style - begin
+   ========================================================================== */
+
+.mkdf-text-marquee {
+	position: relative;
+	white-space: nowrap;
+	color: $default-heading-color;
+	font-size: 60px;
+	line-height: 1.2em;
+	font-weight: 600;
+	overflow: hidden;
+
+	.mkdf-marquee-element {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 25px;
+		box-sizing: border-box;
+
+		&.mkdf-aux-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+/* ==========================================================================
+   Text Marquee shortcode style - end
+   ========================================================================== */

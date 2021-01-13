@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Portfolio Single page style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+	@include mkdfRelativeHolderLayout();
+	margin: 0 0 50px;
+
+	.mkdf-ps-image-holder {
+		@include mkdfRelativeHolderLayout();
+
+		.mkdf-ps-image {
+
+			&:not(.mkdf-item-space) {
+				@include mkdfRelativeHolderLayout();
+				box-sizing: border-box;
+			}
+
+			img {
+				border-radius: 8px;
+			}
+
+			a, img {
+				position: relative;
+				display: block;
+			}
+		}
+	}
+
+	.mkdf-ps-info-holder {
+		@include mkdfRelativeHolderLayout();
+		padding-left: 29px;
+		box-sizing: border-box;
+
+		h4 {
+			margin-bottom: 10px;
+		}
+
+		.mkdf-ps-info-item {
+			@include mkdfRelativeHolderLayout();
+			margin: 0;
+
+			p, a {
+				margin: 0;
+			}
+
+			a {
+				@include mkdfTextSmaller();
+			}
+		}
+
+		.mkdf-ps-info-title {
+			@include mkdfTextColorLightPurple();
+			color: $default-heading-color;
+			margin: 0;
+		}
+
+		.mkdf-ps-info-date {
+			display: inline-block;
+			@include mkdfTextColorLightPurple();
+			color: $default-heading-color;
+		}
+
+		.mkdf-ps-categories, .mkdf-ps-tags {
+			a:after {
+				content: ',';
+				color: initial;
+			}
+
+			a:last-child:after {
+				content: '';
+			}
+		}
+
+		.mkdf-ps-social-share {
+			.mkdf-social-title {
+				font-size: 22px;
+				font-family: $default-heading-font;
+				color: $default-heading-color;
+				display: block;
+				margin: 45px 0 10px 0;
+				font-weight: 500;
+			}
+
+			.mkdf-share-link {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&.mkdf-ps-slider-layout, &.mkdf-ps-images-layout, &.mkdf-ps-gallery-layout {
+		.mkdf-ps-info-holder {
+			padding-left: 2px;
+		}
+	}
+
+	&.mkdf-ps-small-gallery-layout,
+	&.mkdf-ps-small-masonry-layout,
+	&.mkdf-ps-small-slider-layout,
+	&.mkdf-ps-small-images-layout,
+	&.mkdf-ps-huge-images-layout {
+		.mkdf-ps-info-holder .mkdf-ps-social-share .mkdf-social-title {
+			margin: 40px 0 10px;
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - begin
+   ========================================================================== */
+
+.mkdf-portfolio-single-holder {
+
+	.mkdf-ps-image-holder {
+
+		&.mkdf-grid-masonry-list {
+
+			.mkdf-ps-image {
+
+				a {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Portfolio Single page specific style for types - end
+   ========================================================================== */

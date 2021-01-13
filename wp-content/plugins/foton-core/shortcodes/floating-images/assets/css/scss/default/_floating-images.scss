@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Floating Images shortcode styles - begin
+   ========================================================================== */
+
+.mkdf-floating-images-holder {
+    .mkdf-fi-inner {
+        position: relative;
+        display: inline-block;
+    }
+
+    .mkdf-fi-image-holder,
+    .mkdf-fi-image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .mkdf-fi-image-wrapper {
+        height: 100%;
+    }
+
+    .mkdf-fi-main-image-holder {
+        z-index: 10;
+    }
+
+    img {
+        position: absolute;
+        max-width: none;
+        border-radius: 8px;
+        border: 0;
+    
+        .elementor & {
+            border-radius: 8px;
+            max-width: none;
+        }
+    }
+
+    .mkdf-fi-image-overlay {
+        background-size: cover;
+        background-position: center;
+        z-index: 20;
+    }
+
+    $alignment: ('left', 'right', 'center');
+
+    @for $i from 0 to length($alignment) {
+        &.mkdf-fi-#{nth($alignment,$i+1)}-aligned {
+            text-align: #{nth($alignment,$i+1)};
+        }
+    }
+}
+
+/* ==========================================================================
+   Floating Images shortcode styles - end
+   ========================================================================== */

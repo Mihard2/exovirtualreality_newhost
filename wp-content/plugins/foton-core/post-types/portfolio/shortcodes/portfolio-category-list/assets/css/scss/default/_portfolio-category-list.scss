@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Portfolio Category List shortcode style - begin
+   ========================================================================== */
+
+.mkdf-portfolio-category-list-holder {
+    @include mkdfRelativeHolderLayout();
+
+    article {
+
+	    .touch & {
+		    cursor: pointer;
+	    }
+	
+	    &:hover {
+		
+		    .mkdf-pcli-text-holder {
+			    opacity: 1;
+		    }
+	    }
+
+	    .mkdf-pcl-item-inner {
+		    @include mkdfRelativeHolderLayout();
+		    overflow: hidden;
+	    }
+	    
+	    .mkdf-pcli-image {
+		    @include mkdfRelativeHolderLayout();
+		    
+		    img {
+			    display: block;
+			    width: 100%;
+		    }
+	    }
+	
+	    .mkdf-pcli-text-holder {
+		    @include mkdfAbsoluteHolderLayout();
+		    padding: 20px;
+		    background-color: rgba($default-heading-color, .6);
+		    opacity: 0;
+		    text-align: center;
+		    box-sizing: border-box;
+		    @include mkdfTransition(opacity .2s cubic-bezier(0.02, 0.54, 0.58, 1));
+	    }
+
+	    .mkdf-pcli-text-wrapper {
+	        @include mkdfTableLayout();
+	    }
+
+	    .mkdf-pcli-text {
+		    @include mkdfTableCellLayout();
+	    }
+	
+	    .mkdf-pcli-title {
+		    margin: 0;
+		    color: #fff;
+	    }
+	    
+	    .mkdf-pcli-excerpt {
+		    margin: 3px 0 0;
+		    color: #fff;
+	    }
+	
+	    .mkdf-pcli-link {
+		    @include mkdfAbsoluteHolderLayout();
+	    }
+    }
+}
+
+/* ==========================================================================
+   Portfolio Category List shortcode style - end
+   ========================================================================== */

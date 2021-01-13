@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Pricing Tables shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-mac {
+	.mkdf-price-table .mkdf-pt-inner ul li {
+
+		&.mkdf-pt-prices {
+			max-width: 130px;
+
+			.mkdf-pt-mark {
+				margin: 13px 0 0 7px;
+			}
+		}
+
+		&.mkdf-pt-content-holder {
+			padding: 74px 15px 0 130px;
+		}
+	}
+
+
+}
+
+@include ipad-landscape {
+	.mkdf-price-table .mkdf-pt-inner ul li {
+
+		&.mkdf-pt-prices {
+			max-width: 100%;
+			position: relative;
+			text-align: center;
+
+			.mkdf-pt-mark {
+				margin: 9px 0 0;
+			}
+		}
+
+		&.mkdf-pt-content-holder {
+			padding: 26px 15px 0 15px;
+			text-align: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) and (min-width: 681px){
+	.mkdf-price-table{
+		width: 100% !important;
+	}
+
+	.mkdf-price-table:nth-child(2n+1){
+		clear: none !important;;
+	}
+}
+
+/* ==========================================================================
+   Pricing Tables shortcode responsive style - end
+   ========================================================================== */

@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Social Icon widget style - begin
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+.mkdf-social-icon-widget-holder {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.mkdf-social-icon-widget-holder .mkdf-social-icon-widget {
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #58468c !important;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: #ff8a73 !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder {
+  color: #fff !important;
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-social-icon-widget-holder:hover {
+  color: #fff !important;
+}
+
+/* ==========================================================================
+   Social Icon widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=social-icon-widget-map.css.map */

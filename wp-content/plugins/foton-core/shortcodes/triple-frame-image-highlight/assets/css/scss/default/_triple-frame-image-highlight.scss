@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Triple Frame Image Highlight shortcode styles - begin
+   ========================================================================== */
+
+.mkdf-triple-frame-image-highlight {
+    position: relative;
+    text-align: center;
+    visibility: hidden;
+
+    .mkdf-tfih-inner {
+        position: relative;
+        display: inline-block;
+    }
+
+    .mkdf-tfih-link {
+        @include mkdfAbsoluteHolderLayout();
+        z-index: 100;
+    }
+
+    img {
+        display: block;
+        position: relative;
+        z-index: 10;
+    }
+
+    .mkdf-tfih-right-image-holder,
+    .mkdf-tfih-left-image-holder {
+        @include mkdfAbsoluteHolderLayout();
+        visibility: hidden;
+        @include mkdfTransitionTransform(1s cubic-bezier(0.19, 1, 0.22, 1) .2s, transform-origin 1s cubic-bezier(0.19, 1, 0.22, 1) .2s, visibility .0s .2s);
+
+        // img {
+        //     height: 100%;
+        //     width: 100%;
+        //     object-fit: cover;
+        // }
+    }
+
+    .mkdf-tfih-centered-image-holder {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        z-index: 10;
+        @include mkdfTransform(scale(.7));
+        @include mkdfTransitionTransform(.4s cubic-bezier(0.86, 0, 0.07, 1));
+    }
+
+    %trigger {
+        position: absolute;
+        top: 0;
+        width: 15%;
+        height: 100%;
+        z-index: 300;
+        cursor: pointer;
+    }
+
+    .mkdf-tfih-left-trigger {
+        @extend %trigger;
+        left: 0%;
+    }
+
+    .mkdf-tfih-right-trigger {
+        @extend %trigger;
+        right: 0%;
+    }
+
+    .mkdf-tfih-frame {
+        position: absolute;
+        top: -10%;
+        left: 0;
+        height: 110%;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        box-shadow: 0px 10px 30px 0px rgba(137, 173, 255, .45);
+    }
+
+    .mkdf-tfih-top-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: calc(10% - 5px);
+        width: 100%;
+    }
+
+    %top-bar {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .mkdf-tfih-top-bar-left {
+        @extend %top-bar;
+        top: 0;
+        height: 100%;
+        left: 2%;
+        width: 50px;
+
+        $size: 8px;
+
+        > span {
+            height: $size;
+            width: $size;
+            border-radius: $size;
+
+            &:first-child {
+                background-color: $third-main-color;
+            }
+
+            &:nth-child(2) {
+                background-color: $second-main-color;
+            }
+
+            &:last-child {
+                background-color: $first-main-color;
+            }
+        }
+    }
+
+    .mkdf-tfih-top-bar-right {
+        @extend %top-bar;
+        right: 0;
+        height: 60%;
+        top: 20%;
+        width: 50px;
+        flex-direction: column;
+
+        $size: 4px;
+        > span {
+            height: $size;
+            width: $size;
+            border-radius: $size;
+            background-color: #232845;
+        }
+    }
+
+    @at-root .mkdf-triple-frame-image-highlight-holder {
+        &.mkdf-tfih-with-nav {
+            position: relative;
+            text-align: center;
+
+            .mkdf-triple-frame-image-highlight {
+                display: inline-block;
+                width: 80%;
+                padding-top: 3%; //top bar compensate
+            }
+            
+            .mkdf-tfih-inner {
+                max-width: 60%;
+            }
+
+            .mkdf-tfih-nav {
+                position: absolute;
+                max-height: 42px;
+                max-width: 23px;
+                top: 50%;
+                height: 2%;
+                width: 2%;
+                @include mkdfTransform(translateY(-50%));
+                cursor: pointer;
+                fill: $default-heading-color;
+                @include mkdfTransition(fill .2s);
+
+                &:hover {
+                    fill: $first-main-color;
+                }
+            }
+
+            .mkdf-tfih-left {
+                left: 5%;
+            }
+
+            .mkdf-tfih-right {
+                right: 5%;
+            }
+        }
+        
+        &:not(.mkdf-tfih-with-nav) {
+            .mkdf-tfih-inner {
+                max-width: 70%;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Triple Frame Image Highlight shortcode styles - end
+   ========================================================================== */

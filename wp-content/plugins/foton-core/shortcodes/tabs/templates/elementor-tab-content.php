@@ -1,0 +1,1 @@
+<div class="mkdf-tab-container" id="tab-<?php echo sanitize_title($tab_title); ?>"><p><?php echo foton_mikado_get_module_part($tab_text); ?></p></div>

@@ -1,0 +1,46 @@
+.mkdf-testimonials-holder {
+
+	&.mkdf-testimonials-boxed-text {
+
+		@include laptop-landscape-mac {
+			.mkdf-testimonial-text-holder {
+				padding: 40px 0 18px;
+			}
+
+			.mkdf-testimonial-carousel-bottom {
+				width: 100%;
+				padding: 0 24px;
+
+				.mkdf-testimonial-image {
+					padding: 0 20px 0 0;
+				}
+			}
+		}
+
+		@include ipad-landscape {
+			.mkdf-testimonial-text-holder {
+				padding: 40px 40px 18px;
+				.mkdf-testimonial-title {
+					padding: 0 75px 0 0;
+				}
+			}
+
+			.mkdf-testimonial-carousel-bottom {
+				padding: 0;
+
+				.mkdf-testimonial-image {
+					padding: 0 20px 0 0;
+				}
+			}
+		}
+
+		@include ipad-portrait {
+
+			.mkdf-testimonial-text-holder {
+				.mkdf-testimonial-title {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

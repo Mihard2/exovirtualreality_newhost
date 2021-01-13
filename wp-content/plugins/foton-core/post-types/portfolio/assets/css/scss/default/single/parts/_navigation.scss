@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Portfolio Single navigation style - begin
+   ========================================================================== */
+
+.mkdf-ps-navigation {
+	position: relative;
+	display: table;
+	width: 100%;
+	vertical-align: middle;
+	padding: 0;
+	margin: 60px 0;
+	clear: both;
+    box-sizing: border-box;
+
+    .mkdf-ps-full-width-custom-layout & {
+        padding: 0;
+    }
+	
+	.mkdf-ps-back-btn {
+		position: absolute;
+		top: calc(50% - 2px);
+		left: 50%;
+		display: inline-block;
+		vertical-align: middle;
+		@include mkdfTransform(translateX(-50%) translateY(-50%));
+		
+		a {
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+			cursor: pointer;
+			font-size: 23px;
+			line-height: 1;
+			
+			span {
+				display: block;
+				line-height: inherit;
+                background-color: $additional-background-color;
+                padding: 20px 19.4px 22px;
+                border-radius: 8px;
+				
+				&:before,
+				&:after {
+					display: block;
+                    font-size: smaller;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 680px){
+		.mkdf-ps-prev,
+		.mkdf-ps-next {
+
+			> span {
+				display: none;
+			}
+		}
+	}
+	
+	.mkdf-ps-prev,
+	.mkdf-ps-next {
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		width: 49%;
+		padding: 0;
+		box-sizing: border-box;
+
+        >span{
+            @include mkdfTextColorLightPurple();
+            margin: 0 10px;
+        }
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 46px;
+			line-height: 55px;
+
+            span{
+              background-color: $additional-background-color;
+              padding: 4px 6px 6px;
+              border-radius: 8px;
+              display: inline-block;
+            }
+			
+			.mkdf-ps-nav-mark {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+	
+	.mkdf-ps-prev {
+		
+		a {
+			
+			.mkdf-ps-nav-mark {
+				left: 0;
+			}
+		}
+	}
+	
+	.mkdf-ps-next {
+		text-align: right;
+		
+		a {
+			
+			.mkdf-ps-nav-mark {
+				right: 0;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Portfolio Single navigation style - end
+   ========================================================================== */
